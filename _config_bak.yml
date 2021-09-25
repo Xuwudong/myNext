@@ -36,9 +36,9 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 # Schemes
-#scheme: Muse
+scheme: Muse
 #scheme: Mist
-scheme: Pisces
+#scheme: Pisces
 #scheme: Gemini
 
 # Dark Mode
@@ -50,10 +50,10 @@ darkmode: false
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/img.png
-  medium: /images/img.png
-  apple_touch_icon: /images/img.png
-  safari_pinned_tab: /images/img.svg
+  small: /images/favicon-16x16-next.png
+  medium: /images/favicon-32x32-next.png
+  apple_touch_icon: /images/apple-touch-icon-next.png
+  safari_pinned_tab: /images/logo.svg
   #android_manifest: /manifest.json
 
 # Custom Logo (Warning: Do not support scheme Mist)
@@ -82,14 +82,14 @@ creative_commons:
 # Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
 # External url should start with http:// or https://
 menu:
-  home: / || fa fa-home
+  #home: / || fa fa-home
   #about: /about/ || fa fa-user
-  tags: /tags/ || fa fa-tags
-  categories: /categories/ || fa fa-th
-  archives: /archives/ || fa fa-archive
+  #tags: /tags/ || fa fa-tags
+  #categories: /categories/ || fa fa-th
+  #archives: /archives/ || fa fa-archive
   #schedule: /schedule/ || fa fa-calendar
-  sitemap: /sitemap.xml || fa fa-sitemap
-  commonweal: /404/ || fa fa-heartbeat
+  #sitemap: /sitemap.xml || fa fa-sitemap
+  #commonweal: /404/ || fa fa-heartbeat
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -125,14 +125,13 @@ sidebar:
   offset: 12
 
 # Sidebar Avatar
-
 avatar:
   # Replace the default image and set the url here.
-  url: /images/techub.jpg
+  url: #/images/avatar.gif
   # If true, the avatar will be dispalyed in circle.
-  rounded: true
+  rounded: false
   # If true, the avatar will be rotated with the cursor.
-  rotated: true
+  rotated: false
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -160,7 +159,7 @@ social_icons:
 
 # Blog rolls
 links_settings:
-  icon: fa fa-link
+  icon: fa fa-globe
   title: Links
   # Available values: block | inline
   layout: block
@@ -249,7 +248,7 @@ symbols_count_time:
   item_text_total: false
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
-tag_icon: true
+tag_icon: false
 
 # Donate (Sponsor) settings
 # Front-matter variable (unsupport animation).
@@ -364,17 +363,16 @@ codeblock:
     dark: prism-dark
   # Add copy button on codeblock
   copy_button:
-    enable: true
+    enable: false
     # Available values: default | flat | mac
-    style: mac
-
+    style:
 
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: true
+  sidebar: false
   # Scroll percent label in b2t button.
-  scrollpercent: true
+  scrollpercent: false
 
 # Reading progress bar
 reading_progress:
@@ -471,7 +469,7 @@ exturl_icon: true
 
 # Google Webmaster tools verification.
 # See: https://developers.google.com/search
-google_site_verification: "googleba4999b415b0befb"
+google_site_verification:
 
 # Bing Webmaster tools verification.
 # See: https://www.bing.com/webmasters
@@ -483,10 +481,7 @@ yandex_site_verification:
 
 # Baidu Webmaster tools verification.
 # See: https://ziyuan.baidu.com/site
-baidu_site_verification: code-wI49Lf6M4i
-
-# Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: true
+baidu_site_verification:
 
 
 # ---------------------------------------------------------------
@@ -522,7 +517,7 @@ pjax: false
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox/
-fancybox: true
+fancybox: false
 
 # A JavaScript library for zooming images like Medium.
 # Warning: Do not enable both `fancybox` and `mediumzoom`.
@@ -567,8 +562,8 @@ comments:
   # Available values: tabs | buttons
   style: tabs
   # Choose a comment system to be displayed by default.
-  # Available values: changyan | disqus | disqusjs | gitalk | livere | valine
-  active: gitalk
+  # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
+  active:
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: true
   # Lazyload all comment systems.
@@ -612,21 +607,21 @@ changyan:
 livere_uid: # <your_uid>
 
 # Gitalk
-# For more information: https://gitalk.github.io, https://github.com/gitalk/gitalk
+# For more information: https://gitalk.github.io
 gitalk:
-  enable: true
-  github_id: Xuwudong
-  repo: gitalk_repo
-  client_id: f258dfc8962a1ec9a80a
-  client_secret: 6d1c6eec044fe7e76923669aa5827769f0e6c2da
-  admin_user: Xuwudong
-  distraction_free_mode: false # Facebook-like distraction free mode
+  enable: false
+  github_id: # GitHub repo owner
+  repo: # Repository name to store issues
+  client_id: # GitHub Application Client ID
+  client_secret: # GitHub Application Client Secret
+  admin_user: # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
+  distraction_free_mode: true # Facebook-like distraction free mode
   # When the official proxy is not available, you can change it to your own proxy address
   proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token # This is official proxy adress
   # Gitalk's display language depends on user's browser or system environment
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
-  language: zh-CN
+  language:
 
 # Utterances
 # For more information: https://utteranc.es
@@ -653,7 +648,7 @@ isso: # <data_isso>
 rating:
   enable: false
   id:     # <app_id>
-  color:  fc6423
+  color:  "#fc6423"
 
 # AddThis Share. See: https://www.addthis.com
 # Go to https://www.addthis.com/dashboard to customize your tools.
@@ -734,9 +729,8 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/next-theme/hexo-generator-searchdb
 local_search:
-  enable: true
+  enable: false
   # If auto, trigger search by changing input.
-  # If manual, trigger search by pressing enter key or search button.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
   # Show top n results per article, show all results by setting to -1
@@ -847,10 +841,10 @@ motion:
 # Progress bar in the top during page loading.
 # For more information: https://github.com/CodeByZach/pace
 pace:
-  enable: true
+  enable: false
   # All available colors:
   # black | blue | green | orange | pink | purple | red | silver | white | yellow
-  color: green
+  color: blue
   # All available themes:
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
@@ -871,167 +865,17 @@ canvas_ribbon:
 # ---------------------------------------------------------------
 
 vendors:
-  # Internal path prefix.
-  _internal: lib
-
-  # Internal version: 3.1.0
-  # anime: //cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js
-  anime:
-
-  # Internal version: 5.13.0
-  # fontawesome: //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css
-  # fontawesome: //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css
-  fontawesome:
-
-  # MathJax
-  # mathjax: //cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  mathjax:
-
-  # KaTeX
-  # katex: //cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css
-  # katex: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css
-  # copy_tex_js: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js
-  # copy_tex_css: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css
-  katex:
-  copy_tex_js:
-  copy_tex_css:
-
-  # Internal version: 0.2.8
-  # pjax: //cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js
-  pjax:
-
-  # FancyBox
-  # jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
-  # fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
-  # fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
-  jquery:
-  fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
-  fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
-
-  # Medium-zoom
-  # mediumzoom: //cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js
-  mediumzoom:
-
-  # Lazyload
-  # lazyload: //cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
-  # lazyload: //cdnjs.cloudflare.com/ajax/libs/lozad.js/1.14.0/lozad.min.js
-  lazyload:
-
-  # Pangu
-  # pangu: //cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js
-  # pangu: //cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js
-  pangu:
-
-  # Quicklink
-  # quicklink: //cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js
-  quicklink:
-
-  # DisqusJS
-  # disqusjs_js: //cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
-  # disqusjs_css: //cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
-  disqusjs_js:
-  disqusjs_css:
-
-  # Valine
-  # valine: //cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js
-  # valine: //cdnjs.cloudflare.com/ajax/libs/valine/1.3.10/Valine.min.js
-  valine:
-
-  # Gitalk
-  # gitalk_js: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
-  # gitalk_css: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css
-  gitalk_js:
-  gitalk_css:
-
-  # Algolia Search
-  # algolia_search: //cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js
-  # instant_search: //cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js
-  algolia_search:
-  instant_search:
-
-  # Mermaid
-  # mermaid: //cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js
-  # mermaid: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js
-  mermaid:
-
-  # Internal version: 1.2.1
-  # velocity: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js
-  # velocity: //cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js
-  # velocity_ui: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
-  # velocity_ui: //cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js
-  velocity: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js
-  velocity_ui: //cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js
-
-  # Internal version: 1.0.2
-  # pace: //cdn.jsdelivr.net/npm/pace-js@1/pace.min.js
-  # pace: //cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js
-  # pace_css: //cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css
-  # pace_css: //cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css
-  pace:
-  pace_css:
-
-  # Internal version: 1.0.0
-  # three: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three.min.js
-  # three_waves: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/three-waves.min.js
-  # canvas_lines: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_lines.min.js
-  # canvas_sphere: //cdn.jsdelivr.net/gh/theme-next/theme-next-three@1/canvas_sphere.min.js
-  three:
-  three_waves:
-  canvas_lines:
-  canvas_sphere:
-
-  # Internal version: 1.0.0
-  # canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
-  canvas_ribbon:
+  # The CDN provider of NexT internal scripts.
+  # Available values: local | jsdelivr | unpkg | cdnjs
+  # Warning: If you are using the latest master branch of NexT, please set `internal: local`
+  internal: local
+  # The default CDN provider of third-party plugins.
+  # Available values: local | jsdelivr | unpkg | cdnjs
+  # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
+  plugins: jsdelivr
 
 # Assets
+# Accelerate delivery of static files using a CDN
 css: css
 js: js
 images: images
-
-needmoreshare:
-  enable: true
-  cdn:
-    js: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js
-    css: //cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css
-  postbottom:
-    enable: true
-    options:
-      iconStyle: box
-      boxForm: horizontal
-      position: bottomCenter
-      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
-  float:
-    enable: false
-    options:
-      iconStyle: box
-      boxForm: horizontal
-      position: middleRight
-      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
-
-#sharejs:
-#  enable: true
-#  cdn:
-#    js: //cdn.jsdelivr.net/npm/social-share.js@1/dist/js/social-share.min.js
-#    css: //cdn.jsdelivr.net/npm/social-share.js@1/dist/js/social-share.min.css
-#  networks: weibo,qq,wechat,tencent,douban,qzone,linkedin,diandian,facebook,twitter,google
-#  wechat_qrcode:
-#    title: share.title
-#    prompt: share.prompt
-#
-#likely:
-#  enable: true
-#  cdn:
-#    js: //cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.js
-#    css: //cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css
-#  look: normal # available values: normal, light, small, big
-#  networks:
-#    twitter: Tweet
-#    facebook: Share
-#    linkedin: Link
-#    gplus: Plus
-#    vkontakte: Share
-#    odnoklassniki: Class
-#    telegram: Send
-#    whatsapp: Send
-#    pinterest: Pin
